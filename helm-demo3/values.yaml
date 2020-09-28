@@ -1,0 +1,9 @@
+replicaCount: 1
+
+image:
+  repository: kaushikrahul08/webapp
+  tag: v1
+
+service:
+  type: LoadBalancer
+  port: 8085

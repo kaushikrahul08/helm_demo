@@ -1,0 +1,6 @@
+apiVersion: v2
+version: 0.1.0
+appVersion: "1.5"
+name : myapp
+description: my demo chart 1.4
+type: application
