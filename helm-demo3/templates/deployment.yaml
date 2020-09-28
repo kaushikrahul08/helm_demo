@@ -21,3 +21,12 @@ spec:
         ports:
          - name: http
            containerPort: 8000
+        volumeMounts:
+          - name: {{ .Release.Name }}-{{ .Chart.Name }}-pvc
+            mountPath: /mnt/azure
+      volumes:
+       - name: {{ .Release.Name }}-{{ .Chart.Name }}-pv
+           azureFile:
+              secretName: azure-secret
+              shareName: aksshare
+              readOnly: false
